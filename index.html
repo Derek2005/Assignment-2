@@ -1,148 +1,128 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Mozilla splash page</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozilla Splash Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-      /* header and body setup */
-      html {
-        font-family: 'Open Sans', sans-serif;
-        background: url(pattern.png);
-      }
+        /* Add the background pattern */
+        html {
+            font-family: 'Open Sans', sans-serif;
+            background: url('pattern.png') repeat;
+            background-size: 300px 300px;
+            margin: 0;
+            padding: 0;
+        }
 
-      body {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: white;
-        position: relative;
-      }
+        body {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            position: relative;
+        }
 
-      /* Header styling */
-      header {
-        height: 150px;
-      }
+        /* Header styling */
+        header {
+            height: 150px;
+            background-color: white;
+            position: relative;
+        }
 
-      header img {
-        width: 100px;
-        position: absolute;
-        right: 32.5px;
-        top: 32.5px;
-      }
+        header img {
+            width: 100px;
+            position: absolute;
+            right: 32.5px;
+            top: 32.5px;
+        }
 
-      h1 {
-        font-size: 50px;
-        line-height: 140px;
-        margin: 0 0 0 32.5px;
-      }
+        /* Article section */
+        article {
+            padding: 20px;
+            background-color: #f3f3f3;
+        }
 
-      /* main section and video styling */
-      main {
-        background: #ccc;
-      }
+        article h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-      article {
-        padding: 20px;
-      }
+        article iframe {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
 
-      h2 {
-        margin-top: 0;
-      }
+        /* Further info section */
+        .further-info {
+            clear: left;
+            padding: 40px 0;
+            background-color: #c13832;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
 
-      p {
-        line-height: 2;
-      }
+        .further-info a img {
+            max-width: 100%;
+            height: auto;
+        }
 
-      iframe {
-        float: left;
-        margin: 0 20px 20px 0;
-        max-width: 100%;
-      }
+        /* Red panda section */
+        .red-panda {
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
 
-      /* further info links */
-      .further-info {
-        clear: left;
-        padding: 40px 0;
-        background: #c13832;
-        box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
-                    inset 0 -3px 2px rgba(0,0,0,0.5);
-      }
+        .red-panda img {
+            width: 100%;
+            height: auto;
+            max-width: 1200px;
+        }
 
-      .further-info a {
-        width: 25%;
-        display: block;
-        float: left;
-      }
-
-      .further-info img {
-        max-width: 100%;
-      }
-
-      .clearfix {
-        clear: both;
-      }
-
-      /* Red panda image */
-      .red-panda img {
-        display: block;
-        max-width: 100%;
-      }
     </style>
-  </head>
-  <body>
-    <header>
-      <h1>Mozilla</h1>
-      <!-- Insert small Firefox logo in the header -->
-      <img src="firefox_logo_120.png" alt="Firefox Logo">
-    </header>
+</head>
+<body>
 
-    <main>
-      <article>
-        <!-- Embed YouTube video -->
-        <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" 
-                title="Mozilla Firefox Promo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<header>
+    <img src="firefox_logo_120.png" alt="Firefox Logo">
+</header>
 
-        <h2>Rocking the free web</h2>
+<article>
+    <h1>Rocking the Free Web</h1>
+    <p>Mozilla is a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web.</p>
 
-        <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg" 
+            title="Mozilla Firefox Promo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</article>
 
-        <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
-      </article>
+<div class="further-info">
+    <a href="https://www.mozilla.org/en-US/firefox/">
+        <img src="firefox_logo_400.png" alt="Firefox Logo" 
+             srcset="firefox_logo_120.png 120w, firefox_logo_400.png 400w" 
+             sizes="(max-width: 500px) 120px, 400px">
+    </a>
+    <a href="https://addons.mozilla.org/en-US/firefox/">
+        <img src="firefox_addons_400.jpg" alt="Firefox Add-ons" 
+             srcset="firefox_addons_120.jpg 120w, firefox_addons_400.jpg 400w" 
+             sizes="(max-width: 500px) 120px, 400px">
+    </a>
+    <a href="https://www.mozilla.org/en-US/about/">
+        <img src="mozilla_dino_400.png" alt="Mozilla Dinosaur" 
+             srcset="mozilla_dino_120.png 120w, mozilla_dino_400.png 400w" 
+             sizes="(max-width: 500px) 120px, 400px">
+    </a>
+</div>
 
-      <div class="further-info">
-        <!-- Add responsive images with srcset and sizes -->
-        <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img src="firefox_logo_400.png" alt="Firefox Logo" 
-               srcset="firefox_logo_120.png 120w, firefox_logo_400.png 400w" 
-               sizes="(max-width: 500px) 120px, 400px">
-        </a>
-        <a href="https://www.mozilla.org/">
-          <img src="mozilla_dino_400.png" alt="Mozilla Dinosaur" 
-               srcset="mozilla_dino_120.png 120w, mozilla_dino_400.png 400w" 
-               sizes="(max-width: 500px) 120px, 400px">
-        </a>
-        <a href="https://addons.mozilla.org/">
-          <img src="firefox_addons_400.jpg" alt="Firefox Add-ons" 
-               srcset="firefox_addons_120.jpg 120w, firefox_addons_400.jpg 400w" 
-               sizes="(max-width: 500px) 120px, 400px">
-        </a>
-        <a href="https://developer.mozilla.org/en-US/">
-          <img src="red_panda_landscape.jpg" alt="Developer Network">
-        </a>
-        <div class="clearfix"></div>
-      </div>
+<div class="red-panda">
+    <picture>
+        <source media="(max-width: 600px)" srcset="red_panda_portrait.jpg">
+        <img src="red_panda_landscape.jpg" alt="Red Panda">
+    </picture>
+</div>
 
-      <div class="red-panda">
-        <!-- Add responsive red panda image -->
-        <picture>
-          <source media="(max-width: 600px)" srcset="red_panda_portrait.jpg">
-          <img src="red_panda_landscape.jpg" alt="Red Panda">
-        </picture>
-      </div>
-
-    </main>
-  </body>
+</body>
 </html>
